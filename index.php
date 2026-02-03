@@ -1,0 +1,25 @@
+<?php 
+$text = "Hello PHP I Love learning PHP";
+$convertedToArray = explode(' ',$text);
+print_r($convertedToArray);
+echo "<br> <hr>";
+$backToString = implode(' ', $convertedToArray);
+echo $backToString. "<hr>";
+$backToArray = str_split($backToString,1);
+print_r($backToArray);
+echo "<hr>";
+printf('Hello %s And Good Bye', "Ali");
+echo "<hr>";
+$arr = ["AhmadName"=>"Ahmad","AliName"=>"Ali","MohammadName"=>"Mohammad","NazaninName"=>"Nazanin","SarasName"=>"Sara","laylasName"=>"Layla"];
+echo $arr["NazaninName"];
+echo "<hr>";
+$arr1 = [];
+array_push($arr1,"Ali");
+array_push($arr1,"Mohammad");
+array_push($arr1,"Nazanin");
+array_push($arr1,"Hamid","Ali","Fatema","Qasim");
+array_pop($arr1);
+array_shift($arr1);
+array_unshift($arr1,"Sadaf","Ali Reza");
+print_r($arr1);
+?>
