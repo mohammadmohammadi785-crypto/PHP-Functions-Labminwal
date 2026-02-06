@@ -2,10 +2,10 @@
 // push, pop, len, Shift, UnShift, map, Filter, Reduce
 $list = [1,2,3,4,5,6,7,8,9];
 array_push($list, 10,11,12,13);
-// -> UnShift <- =======================
-array_unshift($list, 14,15,16);
 // -> Pop <- ======================
 array_pop($list);
+// -> UnShift <- =======================
+array_unshift($list, 14,15,16);
 // -> splice <- =============================================
 array_splice($list, 4, 2,[17,18,19]);
 print_r($list);
