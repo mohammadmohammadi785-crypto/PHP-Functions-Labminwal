@@ -41,13 +41,13 @@ $outCome = array_reduce($total, function ($current , $item) {
 },0);
 echo $outCome . "<br>";
 // radeuse
-$newarray = [100,300,480, 530,320,750 ,970];
-function getNewPrice($price){
-    return $price*0.03;
-}
-$natija = array_reduce($newarray, function ($carry, $item) {
-    $carry+=$item;
-    return $carry*0.03;
-});
-echo $natija;
+// $newarray = [100,300,480, 530,320,750 ,970];
+// function getNewPrice($price){
+//     return $price*0.03;
+// }
+// $natija = array_reduce($newarray, function ($carry, $item) {
+//     $carry+=$item;
+//     return $carry*0.03;
+// });
+// echo $natija;
 ?>
