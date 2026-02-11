@@ -47,6 +47,8 @@ if (isset($_POST['number1'])) {
         </form>
         <?php if (isset($result)) { ?>
             <p><?php echo 'Result: ' . $result ?></p>
+        <?php } else { ?>
+            <h1>This is the first time</h1>
         <?php } ?>
     </div>
 </body>
