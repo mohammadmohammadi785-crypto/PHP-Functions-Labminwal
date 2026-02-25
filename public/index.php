@@ -1,7 +1,6 @@
 <?php
-$connection = new mysqli('localhost', 'root', '', 'my_db');
-$command = 'SELECT * FROM department';
-$result = $connection->query($command);
+include ('db.php');
+$result = showDepartments();
 ?>
 <!DOCTYPE html>
 <html lang="en">
