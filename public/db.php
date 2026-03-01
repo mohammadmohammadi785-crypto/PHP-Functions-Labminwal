@@ -39,3 +39,14 @@ function displayValues($id)
     $result = $connect->query($command);
     return $result;
 }
+
+function deleteDepartment($id)
+{
+    $command = "DELETE FROM department WHERE id='$id'";
+    $connection = dbConection();
+    if ($connection->query($command)) {
+        header('location:index.php?text=one item has been deleted');
+    } else {
+        header('location:index.php?text=somthing went wrong in deleting one item');
+    }
+}
