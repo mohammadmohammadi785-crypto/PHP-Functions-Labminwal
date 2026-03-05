@@ -1,63 +1,77 @@
 <?php
-// inheritance
-class Animal
+class User
 {
     private $name;
-    private $age;
+    private $email;
 
-    public function __construct($nam, $sin)
+    public function message()
     {
-        $this->name = $nam;
-        $this->age = $sin;
+        return "$this->name Sent you a Message";
     }
 
-    public function eat()
-    {
-        return "$this->name can eat somthing";
-    }
-
-    public function drink()
-    {
-        return "$this->name can drink";
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
-};
-$animal1 = new Animal('Sheep', 5);
-
-// echo $animal1->getName();
-class Human extends Animal
-{
-    private $degreeOfEducation;
-    private $lastName;
-
-    public function __construct($name, $age, $degree, $lastName)
-    {
-        $this->degreeOfEducation = $degree;
-        $this->lastName = $lastName;
-        parent::__construct($name, $age);
-    }
-
-    public function Think()
-    {
-        return parent::getName() . ' can Think';
-    }
+    public function addFriend() {}
 }
 
-$person1 = new Human('Ali', 19, 12, 'Mohammadi');
-$person1->setName('Ahmad');
-echo $person1->getName() . '<br>';
-echo $person1->Think();
-
 /*
+ * // inheritance
+ * class Animal
+ * {
+ *     private $name;
+ *     private $age;
+ *
+ *     public function __construct($nam, $sin)
+ *     {
+ *         $this->name = $nam;
+ *         $this->age = $sin;
+ *     }
+ *
+ *     public function eat()
+ *     {
+ *         return "$this->name can eat somthing";
+ *     }
+ *
+ *     public function drink()
+ *     {
+ *         return "$this->name can drink";
+ *     }
+ *
+ *     public function setName($name)
+ *     {
+ *         $this->name = $name;
+ *     }
+ *
+ *     public function getName()
+ *     {
+ *         return $this->name;
+ *     }
+ * };
+ * $animal1 = new Animal('Sheep', 5);
+ *
+ * // echo $animal1->getName();
+ * class Human extends Animal
+ * {
+ *     private $degreeOfEducation;
+ *     private $lastName;
+ *
+ *     public function __construct($name, $age, $degree, $lastName)
+ *     {
+ *         $this->degreeOfEducation = $degree;
+ *         $this->lastName = $lastName;
+ *         parent::__construct($name, $age);
+ *     }
+ *
+ *     public function Think()
+ *     {
+ *         return parent::getName() . ' can Think';
+ *     }
+ * }
+ *
+ * $person1 = new Human('Ali', 19, 12, 'Mohammadi');
+ * $person1->setName('Ahmad');
+ * echo $person1->getName() . '<br>';
+ * echo $person1->Think();
+ *
+ *
  * Object oriented programming
  * کمک می کند که قابل استفاده مججد بسازیم
  * کد را خوانا تر نموده و قابل تغییر نماییم
