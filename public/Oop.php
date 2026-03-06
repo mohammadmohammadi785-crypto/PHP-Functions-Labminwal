@@ -1,17 +1,39 @@
 <?php
 class User
 {
-    private $name;
-    private $email;
-
+    protected $name;
+    public $email;
+    public $userType;
+    public function __construct($name, $email)
+    {
+        $this->name = $name;
+        $this->email = $email;
+    }
     public function message()
     {
         return "$this->name Sent you a Message";
     }
 
-    public function addFriend() {}
+    public function addFriend()
+    {
+        return "$this->email Added you as a friend";
+    }
 }
-
+class AdminUser extends User
+{
+    private $level;
+    public function __construct($name, $email, $level)
+    {
+        $this->level = $level;
+        return parent::__construct($name, $email);
+    }
+    public function message()
+    {
+        return "$this->name Sent you a new Message";
+    }
+}
+$admin1 = new AdminUser("Jhon", "Jhon@gmail.com", 1);
+$admin1->userType = "admin";
 /*
  * // inheritance
  * class Animal
