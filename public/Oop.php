@@ -1,4 +1,6 @@
 <?php
+
+/*
 class User
 {
     protected $name;
@@ -31,10 +33,15 @@ class AdminUser extends User
     {
         return "$this->name Sent you a new Message";
     }
+    public static function deleteUser()
+    {
+        echo "One user has been deleted";
+    }
 }
 $admin1 = new AdminUser("Jhon", "Jhon@gmail.com", 1);
-$admin1->userType = "admin";
-/*
+echo $admin1->userType = "admin" . "<br>";
+AdminUser::deleteUser();
+
  * // inheritance
  * class Animal
  * {
