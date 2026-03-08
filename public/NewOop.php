@@ -1,4 +1,30 @@
 <?php
+// abstraction
+abstract class Animal
+{
+    public function sound()
+    {
+        echo "Animal Can make sound";
+    }
+    abstract public function move();
+}
+class Cat extends Animal
+{
+    public function move()
+    {
+        echo "Cat move with 4 legs";
+    }
+}
+// Polymorphism  چندین شکله
+class Bird extends Animal
+{
+    public function move()
+    {
+        echo "bird can fly";
+    }
+}
+// interface class
+/*
 class User
 {
     public $name;
@@ -20,3 +46,4 @@ class User
 $user1 = new User("ali reza", "ali@example.com");
 echo $user1->name . "<br>";
 $user1->getName();
+*/
