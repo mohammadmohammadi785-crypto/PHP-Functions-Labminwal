@@ -24,6 +24,24 @@ class Bird extends Animal
     }
 }
 // interface class
+interface Shape
+{
+    public function area();
+    public function ShapeType();
+}
+class circle implements Shape
+{
+    public function area()
+    {
+        echo 3.4 * 5 * 5;
+    }
+    public function ShapeType()
+    {
+        echo "Shapes";
+    }
+}
+$Shape1 = new circle();
+$Shape1->area();
 /*
 class User
 {
