@@ -15,7 +15,7 @@ $now = $now->format('Y:m:d:w:H:i:s');
 
 <body>
     <div class="h-screen w-full flex justify-center items-center">
-        <div class="text-7xl flex justify-center items-center w-[50%] h-[50%] border rounded-md" id="clock"></div>
+        <div class="text-7xl text-center flex justify-center items-center w-[50%] h-[50%] border rounded-md" id="clock"></div>
     </div>
     <script>
         let now = "<?php echo $now ?>".split(":");
@@ -64,7 +64,9 @@ $now = $now->format('Y:m:d:w:H:i:s');
                 hour = 0;
             }
             document.getElementById("clock").innerHTML =
-                String(hour).padStart(2, "0") + ":" + String(minute).padStart(2, "0") + ":" + String(seconds).padStart(2, "0")
+                String(hour).padStart(2, "0") + ":" + String(minute).padStart(2, "0") + ":" + String(seconds).padStart(2, "0") + "<br>" +
+                yeare + "-" + month + "-" + day + "<br>" +
+                dayName
         }
         setInterval(showClock, 1000);
         showClock();
