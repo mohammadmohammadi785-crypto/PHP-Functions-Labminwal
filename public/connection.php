@@ -1,21 +1,14 @@
 <?php
-class dbConnection
-{
-    private $hostName = "localhost";
-    private $db_name = "testing_db";
-    private $username = "root";
-    private $password = "";
-    public function connect()
-    {
-        try {
-            $dbsorce = "mysql:host=" . $this->hostName . ";dbname=" . $this->db_name . ";";
-            $connect = new PDO($dbsorce, $this->username, $this->password);
-            echo "db connected successfully";
-            return $connect;
-        } catch (Exception $e) {
-            echo "somthing went wrong" . $e->getMessage();
-        }
-    }
+$host = "localhost";
+$databasename = "testing_db";
+$username = "root";
+$password = "";
+try {
+    $dbs = "mysql:port=" . $host . ";dbname=" . $databasename . ";";
+    $connect = new PDO($dbs, $username, $password);
+    return $connect;
+    //code...
+} catch (Exception $error) {
+    echo $error->getMessage();
+    //throw $th;
 }
-$db = new dbConnection();
-$db->connect();
