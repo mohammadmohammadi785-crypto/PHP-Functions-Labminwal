@@ -29,12 +29,12 @@ require_once "connection.php";
             $result = $statement->execute();
             foreach ($statement as $row) {
             ?>
-            <tr>
-                <td class="border p-2.5 text-center"><?php echo $row["id"] ?></td>
-                <td class="border p-2.5 text-center"><?php echo $row["name"] ?></td>
-                <td class="border p-2.5 text-center"><?php echo $row["lastname"] ?></td>
-                <td class="border p-2.5 text-center"><?php echo $row["class"] ?></td>
-            </tr>
+                <tr>
+                    <td class="border p-2.5 text-center"><?php echo $row["id"] ?></td>
+                    <td class="border p-2.5 text-center"><?php echo $row["name"] ?></td>
+                    <td class="border p-2.5 text-center"><?php echo $row["lastname"] ?></td>
+                    <td class="border p-2.5 text-center"><?php echo $row["class"] ?></td>
+                </tr>
             <?php } ?>
         </table>
     </div>
